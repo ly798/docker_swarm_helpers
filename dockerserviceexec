@@ -46,11 +46,12 @@ fi
 # --------------------------------------------------------------------------------------
 
 # check if tty is present (because no tty is present when running from gitlab-deployment with gitlab-runner and docker-in-docker)
-if [ -t 0 ] ; then
-        set -x
-        ssh -t $NODE docker exec -it $CONTAINER $COMMAND
-else
-        set -x
-        echo ssh $NODE docker exec -i $CONTAINER $COMMAND
-        ssh $NODE docker exec -i $CONTAINER $COMMAND
-fi
+#if [ -t 0 ] ; then
+#        set -x
+#        ssh -t $NODE docker exec -it $CONTAINER $COMMAND
+#else
+#        set -x
+#        echo ssh $NODE docker exec -i $CONTAINER $COMMAND
+#        ssh $NODE docker exec -i $CONTAINER $COMMAND
+#fi
+ssh $NODE docker exec -i $CONTAINER $COMMAND

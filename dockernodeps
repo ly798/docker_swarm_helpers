@@ -47,10 +47,10 @@ done
 # --------------------------------------------------------------------------------------
 
 # check if ssh-agent contains key
-if ! ssh-add -l >/dev/null ; then
-	echo ssh-agent does not contain key. Be sure to use key-forwarding with ssh.
-	exit 1
-fi
+#if ! ssh-add -l >/dev/null ; then
+#	echo ssh-agent does not contain key. Be sure to use key-forwarding with ssh.
+#	exit 1
+#fi
 
 # --------------------------------------------------------------------------------------
 
